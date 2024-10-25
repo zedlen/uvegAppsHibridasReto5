@@ -1,9 +1,9 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'uveg.reto.5',
   appName: 'Reto 5',
-  webDir: 'www'
+  webDir: 'www',
 };
 
 export default config;

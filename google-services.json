@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "105894834210",
+    "project_id": "reto-5-2204b",
+    "storage_bucket": "reto-5-2204b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105894834210:android:3c677e8c3a071a3440da7b",
+        "android_client_info": {
+          "package_name": "uveg.reto5"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLspyWJBaGd2LFGIO0p3PFeCn-0j1PJ6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
