@@ -14,7 +14,6 @@ export class Tab1Page {
       this.items = items.sort((entry1: Entry, entry2: Entry) => {
         const date1 = new Date(entry1.date);
         const date2 = new Date(entry2.date);
-        console.log(date1, date2);
         return date1.getTime() < date2.getTime() ? 1 : 0;
       });
     });
