@@ -1,0 +1,19 @@
+@import '../../theme/variables.scss';
+.form-holder{
+    padding: .5em;
+    .input-holder{
+        padding: .1em;
+        .input{
+           border: 2px solid $primary;
+           border-radius: 15px;
+           &.has-focus{
+               border-color: $accent;
+           }
+        }
+        .input-error{
+            margin-bottom: .7em;
+            color: $error;
+            font-size: .8em;
+        }
+       }
+}

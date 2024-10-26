@@ -1,13 +1,77 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Tab 2 </ion-title>
+    <ion-title> Agregar</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card class="form-holder">
+    <ion-card-title>Agregar Noticia</ion-card-title>
+    <form [formGroup]="group">
+      <ion-row class="input-holder">
+        <ion-label> Titulo</ion-label>
+        <ion-input
+          class="input"
+          type="text"
+          name="title"
+          formControlName="title"
+        />
+        <span
+          class="input-error"
+          *ngIf="group.controls['title'].touched && group.controls['title'].errors?.['required']"
+          >Este campo es requerido</span
+        >
+      </ion-row>
+      <ion-row class="input-holder">
+        <ion-label> Imagen (unicamente URL)</ion-label>
+        <ion-input
+          class="input"
+          type="text"
+          name="image"
+          formControlName="image"
+          [clearInput]="true"
+        />
+        <span
+          class="input-error"
+          *ngIf="group.controls['image'].touched && group.controls['image'].errors?.['required']"
+          >Este campo es requerido</span
+        >
+        <ion-img
+          [src]="group.controls['image'].value"
+          *ngIf="group.controls['image']?.value"
+        />
+      </ion-row>
+      <ion-row class="input-holder">
+        <ion-label> Fecha</ion-label>
+        <ion-input
+          class="input"
+          type="date"
+          name="date"
+          formControlName="date"
+        /><span
+          class="input-error"
+          *ngIf="group.controls['date'].touched && group.controls['date'].errors?.['required']"
+          >Este campo es requerido</span
+        >
+      </ion-row>
+      <ion-row class="input-holder">
+        <ion-label> Descripción</ion-label>
+        <ion-textarea
+          rows="5"
+          class="input"
+          type="text"
+          name="description"
+          formControlName="description"
+        />
+        <span
+          class="input-error"
+          *ngIf="group.controls['description'].touched && group.controls['description'].errors?.['required']"
+          >Este campo es requerido</span
+        >
+      </ion-row>
+      <ion-button size="big" expand="block" (click)="createEntry()"
+        >Guardar</ion-button
+      >
+    </form>
+  </ion-card>
 </ion-content>

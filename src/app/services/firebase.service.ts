@@ -27,7 +27,6 @@ export class FirebaseService {
   itemsCollection: CollectionReference;
   firestore: Firestore = inject(Firestore);
   constructor() {
-    console.log(this.firestore.toJSON());
     this.itemsCollection = collection(this.firestore, 'entry');
     this.item$ = collectionData(this.itemsCollection, {
       idField: 'id',
